@@ -42,21 +42,21 @@ body {
     left: 0;
     right: 0;
     z-index: 9999;
-    box-shadow: 0.1px 0.5px 10px #523726;
+    position: fixed;
 }
 
 .navbar .navbar-nav a {
-    font-family: "Cormorant Garamond", italic;
     color: #7f5539;
     display: inline-block;
-    font-size: 1.6rem;
-    margin: 0 3rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 3rem; 
+    font-weight: 500;
 }
 
 .navbar .navbar-nav a:hover {
     color: #263c41;
     transform: scale(1.03);
+    text-decoration: underline;
 }
 
 .navbar .navbar-extra a {
@@ -75,7 +75,7 @@ body {
     align-items: center;
     position: relative;
     cursor: default;
-    justify-content: center;
+    justify-items: center;
     background-image: url(../assets/home-bg.png);
     background-size: cover;
 }
@@ -92,10 +92,41 @@ body {
 .home .content {
     padding: 1.4rem 7%;
     max-width: 55rem;
-    justify-items: left;
+    line-height: 1.2;
 }
 
-.home .content h1{
-    font-size: 3rem;
+.home .content h1 {
+    font-size: 3.3rem;
     color: #422c1e;
+    padding-top: 0;
 }
+
+.home .content p {
+    opacity: 70%;
+    padding-bottom: 1.5rem;
+}
+
+.home .content .cta {
+    font-size: 1.1rem;
+    border: 1.5px solid #422c1e;
+    background-color: #f5f0eb;
+    color: #422c1e;
+    padding : .5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+
+.home .content .cta:hover {
+    transform: scale(1.03);
+}
+
+.home .content .cta span {
+    padding-left: 0.5rem;
+}
+
+.home .content .cta span:hover {
+    padding-left: 1.5rem;
+}
+
