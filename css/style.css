@@ -13,6 +13,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -53,10 +54,26 @@ body {
     font-weight: 500;
 }
 
+.navbar .navbar-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #422c1e;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
 .navbar .navbar-nav a:hover {
     color: #263c41;
     transform: scale(1.03);
-    text-decoration: underline;
 }
 
 .navbar .navbar-extra a {
@@ -70,7 +87,7 @@ body {
 
 /* HOME */
 .home {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -103,7 +120,8 @@ body {
 
 .home .content p {
     opacity: 70%;
-    padding-bottom: 1.5rem;
+    font-size: 1.2rem;
+    padding-bottom: 1.1rem;
 }
 
 .home .content .cta {
@@ -128,5 +146,62 @@ body {
 
 .home .content .cta span:hover {
     padding-left: 1.5rem;
+}
+
+
+/* ABOUT */
+.about {
+    height: 85vh;
+    align-items: center;
+    cursor: default;
+    background-image: url(../assets/about-bg.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem 7%;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.about-img img {
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content {
+    flex: 1 1 45%;
+}
+
+.content h3 {
+    font-size: 1.8rem;
+    color: #3c2e2e;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #333;
+    opacity: 80%;
+}
+
+
+/* COLLECTION */
+.collection {
+    height: 100vh;
+    background-color: #f5f0eb;
 }
 
